@@ -31,3 +31,8 @@ Kalau sebelumnya kamu pernah menambahkan izin internet di `android/app/src/main/
 - CBZ/ZIP komik: gambar dibaca offline dari ZIP/CBZ
 
 CBR, MOBI, DJVU, DOCX belum dibuat reader native karena butuh parser tambahan yang lebih berat.
+
+
+## v6.1 compile fix
+- Ganti ikon CupertinoIcons.books_vertical ke CupertinoIcons.book.
+- Ubah avg progress menjadi double agar cocok dengan _TinyProgress.

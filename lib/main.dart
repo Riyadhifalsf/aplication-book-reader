@@ -1538,7 +1538,7 @@ class _StatisticsView extends StatelessWidget {
   Widget build(BuildContext context) {
     final finished = books.where((e) => e.isFinished).length;
     final reading = books.where((e) => e.isStarted && !e.isFinished).length;
-    final avg = books.isEmpty ? 0 : books.map((e) => e.progress).reduce((a, b) => a + b) / books.length;
+    final double avg = books.isEmpty ? 0.0 : books.map((e) => e.progress).reduce((a, b) => a + b) / books.length;
     final pdf = books.where((e) => e.format == BookFormat.pdf).length;
     final text = books.where((e) => e.format == BookFormat.txt || e.format == BookFormat.epub).length;
     final cbz = books.where((e) => e.format == BookFormat.cbz).length;
@@ -1547,7 +1547,7 @@ class _StatisticsView extends StatelessWidget {
       children: [
         Row(
           children: [
-            Expanded(child: _StatCard(title: 'Total buku', value: '${books.length}', icon: CupertinoIcons.books_vertical)),
+            Expanded(child: _StatCard(title: 'Total buku', value: '${books.length}', icon: CupertinoIcons.book)),
             const SizedBox(width: 12),
             Expanded(child: _StatCard(title: 'Dibaca', value: '$reading', icon: CupertinoIcons.play_circle)),
           ],
